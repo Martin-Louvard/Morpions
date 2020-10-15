@@ -19,8 +19,9 @@ while partie.board.is_still_ongoing?
         puts "\nVictoires: #{partie.victory_counter}"
     end
     partie.play_turn
+    
     if partie.board.is_still_ongoing? == false
-        puts "ET GAGNE LA PARTIE !!!!!! \n\n\n"
+        puts "Victoire: #{partie.board.victory?} \n\n\n"
         partie.new_round?
     end
     system("clear")
